@@ -13,6 +13,7 @@ module.exports = {
           '@storybook/addon-interactions',
           '@storybook/addon-links',
           '@storybook/addon-coverage',
+          '@storybook/addon-jest',
           {
               name: '@storybook/addon-storysource',
               options: {
