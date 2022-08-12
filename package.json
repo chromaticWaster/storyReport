@@ -16,8 +16,8 @@
     "docs:elements": "npx web-component-analyzer ./src/**/*.{js,ts} --outFile LIST.md --features ",
     "storybook": "npm run clean && tsc && npm run docs:custom-elements && concurrently -k -r \"tsc --build --watch --preserveWatchOutput\" \"npx start-storybook --no-manager-cache --port=6006\"",
     "test:storybook": "concurrently -k -r -s first \"npm run storybook\" \"npx wait-on tcp:6006 && test-storybook --verbose --coverage\"",
-    "test:jest": "jest --coverage",
-    "test": "npm run test:storybook & npm run test:jest"
+    "test:jest": "jest --json --outputFile=.jest-test-results.json --coverage",
+    "test": "npm run  npm run test:jest & test:storybook"
   },
   "repository": {
     "type": "git",
@@ -39,7 +39,6 @@
     "@storybook/addon-coverage": "^0.0.2",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
-    "@storybook/addon-jest": "^6.5.10",
     "@storybook/addon-links": "^6.5.9",
     "@storybook/addon-storysource": "^6.5.9",
     "@storybook/jest": "^0.0.10",
