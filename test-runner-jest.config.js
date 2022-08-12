@@ -7,6 +7,8 @@ module.exports = {
    * @see https://jestjs.io/docs/configuration
    */
     reporters: [
+      'default',
       'jest-github-actions-reporter'
-    ]
+    ],
+    testLocationInResults: true
 }
