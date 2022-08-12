@@ -12,3 +12,4 @@ module.exports = {
     ],
     testLocationInResults: true
 }
+
