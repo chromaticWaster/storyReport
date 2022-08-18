@@ -1,8 +1,6 @@
 import { setCustomElementsManifest } from '@storybook/web-components';
 import customElements from '../custom-elements.json';
 import pretty from 'pretty';
-import { withTests } from '@storybook/addon-jest';
-import results from  '../jest-test-results.json';
 import basicTheme from '!!style-loader?injectType=lazyStyleTag!css-loader!../themes/default-theme.css'
 
 import cssVariablesTheme from '@etchteam/storybook-addon-css-variables-theme';
@@ -12,10 +10,7 @@ setCustomElementsManifest(customElements);
 
 // Activate the theme switcher addon.
 export const decorators = [
-	cssVariablesTheme,
-	withTests({
-		results,
-	  }),
+	cssVariablesTheme
 ];
 
 // Configure global settings for all stories.
