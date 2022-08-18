@@ -7,6 +7,5 @@ module.exports = {
     transformIgnorePatterns: ['<rootDir>/node_modules/'],
     testPathIgnorePatterns: ['<rootDir>/dist/'],
     modulePathIgnorePatterns: ['node_modules', 'jest-test-results.json'],
-    reporters: ['default','github-actions'],
-    testLocationInResults: true
+    reporters: ['github-actions']
   };
