@@ -1,8 +1,7 @@
 name: pull-request-tests
 on:
   pull_request:
-    branches:
-      branches: [ jest-v28-upgrade-test,develop ]
+    branches: [ jest-v28-upgrade-test,develop ]
 jobs:
   pr-run-storybook-tests:
     timeout-minutes: 5 
